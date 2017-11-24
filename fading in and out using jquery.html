@@ -1,0 +1,114 @@
+<html>
+
+    <head>
+    
+        <title>jQuery</title>
+        
+         <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+        
+        <style type="text/css">
+
+            #fade {
+                   
+                    border-radius:50%;
+                    font-weight: bold;
+                    background-color: aqua;
+                    
+                     }
+            
+            #fadeIn {
+                   
+                    border-radius:50%;
+                    font-weight: bold;
+                    background-color: aqua;
+                    
+                     }
+            
+            #two {
+                
+                    display: none;
+                
+                
+            }
+            
+            
+            
+                
+            
+        </style>
+    
+    
+    
+    </head>
+    
+    <Body>
+        
+        
+       
+        
+        <p id="text">This is some text.</p>
+        
+        
+        
+        
+        
+        <button id="toggle"> Toggle text!</button>
+        
+       
+        
+        
+        
+        
+        
+        <script type="text/javascript"> 
+            
+       
+            
+           
+        
+        $("#toggle").click(function() {
+            
+            
+            if($("#text").css("display") == "none") {
+                
+                $("#text").fadeIn("slow");
+                
+                  //if text is not displayed.
+                
+                // don't forget the hash tag.
+                
+                
+            } else {
+                
+                
+                $("#text").fadeOut("slow");
+                
+                //if text is already displayed.
+                
+                // don't forget the hash tag.
+                
+            }
+            
+            
+            
+            
+            
+        });
+      
+            
+            
+                              
+            
+            
+         
+         
+        
+        
+        </script>
+        
+       
+    
+    </Body>
+        
+
+</html>
