@@ -1,0 +1,115 @@
+<html>
+
+    <head>
+    
+        <title>draggables and sizables</title>
+        
+        
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+        <link rel="stylesheet" href="https://ajax.googleapis.com/ajax/libs/jqueryui/1.12.1/themes/smoothness/jquery-ui.css">
+        <script src="https://ajax.googleapis.com/ajax/libs/jqueryui/1.12.1/jquery-ui.min.js"></script>
+        
+        <style type="text/css">
+            
+            #containerWrapper {
+                
+                
+                background-color: red;
+                width:350px;
+                height:350px;
+               
+                
+                
+             }
+            
+            #resizable {
+                
+                width:200px;
+                height:200px;
+                background-color: green;
+                
+            }
+            
+            #alsoDiv {
+                
+                 width:200px;
+                height:200px;
+                background-color: blue;
+                
+                
+                
+            }
+
+            
+        </style>
+    
+    
+    
+    </head>
+    
+    <Body>
+        
+        
+       <div id="containerWrapper"><span>Help me I'm trapped!</span></div>
+        
+        <div id="resizable"></div>
+        
+        <div id="alsoDiv"></div>
+        
+     
+        
+        
+        
+        
+        
+        
+        
+        <script type="text/javascript"> 
+            
+          
+            
+            $( "span" ).draggable( {
+                
+                containment:"parent"
+            
+            });
+            
+        
+            $("#resizable").resizable ({
+                
+                
+                
+                grid:50,
+                
+                alsoResize: "#alsoDiv" ,
+                
+                resize: function ( event, ui ) {
+                    
+                    if($("#resizable").width() > 300) {
+                    
+                        alert("big enough!");
+                    
+                }
+                
+                }
+                
+            });
+                                       
+                
+                
+            
+              
+            
+            
+                
+      
+            
+           
+        
+        
+        </script>
+    
+    </Body>
+        
+
+</html>

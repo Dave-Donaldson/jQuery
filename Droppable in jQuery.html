@@ -1,0 +1,85 @@
+<html>
+
+    <head>
+    
+        <title>jQuery</title>
+        
+        
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+        <link rel="stylesheet" href="https://ajax.googleapis.com/ajax/libs/jqueryui/1.12.1/themes/smoothness/jquery-ui.css">
+        <script src="https://ajax.googleapis.com/ajax/libs/jqueryui/1.12.1/jquery-ui.min.js"></script>
+        
+        <style type="text/css">
+            
+           #draggable { 
+                       
+                       background-color: red;
+                       width: 100px; 
+                       height: 100px; 
+                       padding: 0.5em; 
+                       float: left; 
+                       margin: 10px 10px 10px 0; 
+                }
+           
+            
+            
+            #droppable { 
+                        width: 150px; 
+                        height: 150px; 
+                        padding: 0.5em; 
+                        float: left; 
+                        margin: 10px;
+                        background-color: blue;
+                        }
+            
+        </style>
+    
+    
+    
+    </head>
+    
+    <Body>
+        
+            <div id="draggable"></div>
+        
+            <div id="droppable"></div>
+    
+        
+        
+        
+        
+        <script type="text/javascript"> 
+            
+           $( function() {
+                    $( "#draggable" ).draggable();
+                    $( "#droppable" ).droppable({
+                      drop: function( event, ui ) {
+                        $( this )
+                         
+                          alert("The boxes are touching!");
+                          
+                          }
+                    });
+                } )
+                    
+                    
+                    
+                                                
+            
+  
+            
+            
+            
+            
+          
+            
+          
+                
+                
+            
+        </script>
+    
+    </Body>
+        
+
+</html>
